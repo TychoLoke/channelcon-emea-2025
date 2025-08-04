@@ -6,24 +6,44 @@
     <title>ChannelCon EMEA 2025 - Accommodation Guide | GTIA</title>
     <style>
         body {
-            font-family: 'Arial', 'Helvetica Neue', sans-serif;
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background-color: #f8f9fa;
-            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #1f2937;
+            font-size: 16px;
         }
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             background: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            border-radius: 0 0 16px 16px;
+            overflow: hidden;
+        }
+        .price-check-banner {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 500;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .price-check-banner .highlight {
+            font-weight: 700;
+            background: rgba(255,255,255,0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin: 0 4px;
         }
         .header {
             background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
             color: white;
-            padding: 2.5rem 2rem;
+            padding: 3rem 2rem;
             position: relative;
+            overflow: hidden;
         }
         .header::before {
             content: '';
@@ -32,89 +52,104 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.3;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.4;
         }
         .header-content {
             position: relative;
             z-index: 1;
+            text-align: center;
         }
         .header h1 {
             margin: 0;
-            font-size: 2.8rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            letter-spacing: -0.02em;
         }
         .subtitle {
-            font-size: 1.3rem;
-            margin-top: 0.5rem;
+            font-size: 1.4rem;
+            margin-top: 1rem;
             opacity: 0.95;
             font-weight: 300;
+            letter-spacing: 0.02em;
         }
         .gtia-brand {
-            margin-top: 1rem;
-            font-size: 0.9rem;
+            margin-top: 1.5rem;
+            font-size: 1rem;
             color: #e2e8f0;
+            font-weight: 500;
         }
         .content {
-            padding: 2.5rem;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .event-info {
             background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            margin-bottom: 2.5rem;
+            padding: 2.5rem;
+            border-radius: 16px;
+            margin-bottom: 3rem;
             border: 1px solid #0ea5e9;
             border-left: 6px solid #0ea5e9;
+            box-shadow: 0 4px 20px rgba(14, 165, 233, 0.1);
         }
         .event-details {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
         }
         .detail-item {
             display: flex;
             align-items: center;
-            font-size: 1rem;
+            font-size: 1.05rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.7);
+            border-radius: 8px;
+            border: 1px solid rgba(14, 165, 233, 0.1);
         }
         .detail-item strong {
             color: #1e40af;
-            margin-right: 0.5rem;
+            margin-right: 0.75rem;
+            font-weight: 600;
         }
         .savings-highlight {
             background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
             color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
+            padding: 2rem;
+            border-radius: 16px;
             text-align: center;
-            margin: 2.5rem 0;
+            margin: 3rem 0;
             font-weight: 600;
-            font-size: 1.2rem;
-            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+            font-size: 1.3rem;
+            box-shadow: 0 8px 25px rgba(220, 38, 38, 0.3);
+            border: 1px solid rgba(255,255,255,0.1);
         }
         .gtia-rates {
             background: linear-gradient(135deg, #059669 0%, #10b981 100%);
             color: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            margin: 2rem 0;
+            padding: 2rem;
+            border-radius: 16px;
+            margin: 3rem 0;
             text-align: center;
+            box-shadow: 0 8px 25px rgba(5, 150, 105, 0.3);
         }
         .hotel-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-            gap: 2rem;
-            margin: 2.5rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2.5rem;
+            margin: 3rem 0;
         }
         .hotel-card {
             border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 2rem;
-            transition: all 0.3s ease;
+            border-radius: 16px;
+            padding: 2.5rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             background: white;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
         }
         .hotel-card::before {
             content: '';
@@ -125,27 +160,29 @@
             height: 4px;
             background: linear-gradient(90deg, #3b82f6, #1e40af);
             transform: scaleX(0);
-            transition: transform 0.3s ease;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .hotel-card:hover::before {
             transform: scaleX(1);
         }
         .hotel-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            transform: translateY(-12px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
             border-color: #3b82f6;
         }
         .hotel-name {
             color: #1e40af;
-            font-size: 1.4rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.01em;
         }
         .price {
             color: #059669;
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 700;
-            margin: 1rem 0;
+            margin: 1.5rem 0;
+            letter-spacing: -0.02em;
         }
         .price.expensive {
             color: #dc2626;
@@ -154,12 +191,13 @@
             color: #7c3aed;
         }
         .commute {
-            background: #f1f5f9;
-            padding: 1rem;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #f1f5f9 0%, #f8fafc 100%);
+            padding: 1.25rem;
+            border-radius: 12px;
             margin: 1.5rem 0;
             font-size: 0.95rem;
             border-left: 4px solid #3b82f6;
+            font-weight: 500;
         }
         .features {
             list-style: none;
@@ -167,10 +205,15 @@
             margin: 1.5rem 0;
         }
         .features li {
-            padding: 0.5rem 0;
+            padding: 0.75rem 0;
             border-bottom: 1px solid #f1f5f9;
             position: relative;
-            padding-left: 1.5rem;
+            padding-left: 2rem;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+        .features li:hover {
+            color: #3b82f6;
         }
         .features li:before {
             content: "✓";
@@ -178,63 +221,74 @@
             font-weight: bold;
             position: absolute;
             left: 0;
+            font-size: 1.1rem;
         }
         .badge {
             display: inline-block;
             color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
+            padding: 0.5rem 1.25rem;
+            border-radius: 25px;
             font-size: 0.8rem;
-            margin: 0.3rem 0.3rem 1rem 0;
+            margin: 0.25rem 0.5rem 1.5rem 0;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
-        .badge.official { background: #7c3aed; }
-        .badge.gtia-rates { background: #059669; }
-        .badge.best-value { background: #0ea5e9; }
-        .badge.most-convenient { background: #f59e0b; }
-        .badge.budget { background: #8b5cf6; }
+        .badge.official { background: linear-gradient(135deg, #7c3aed, #6d28d9); }
+        .badge.gtia-rates { background: linear-gradient(135deg, #059669, #047857); }
+        .badge.best-value { background: linear-gradient(135deg, #0ea5e9, #0284c7); }
+        .badge.most-convenient { background: linear-gradient(135deg, #f59e0b, #d97706); }
+        .badge.budget { background: linear-gradient(135deg, #8b5cf6, #7c3aed); }
         .transport-info {
             background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
-            padding: 2rem;
-            border-radius: 12px;
-            margin: 2.5rem 0;
+            padding: 2.5rem;
+            border-radius: 16px;
+            margin: 3rem 0;
             border: 1px solid #22c55e;
             border-left: 6px solid #22c55e;
+            box-shadow: 0 4px 20px rgba(34, 197, 94, 0.1);
         }
         .transport-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
         }
         .transport-item {
             background: white;
-            padding: 1rem;
-            border-radius: 8px;
+            padding: 1.5rem;
+            border-radius: 12px;
             border: 1px solid #d1fae5;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s ease;
+        }
+        .transport-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
         .sources {
-            background: #f8fafc;
-            padding: 2rem;
-            border-radius: 12px;
-            margin-top: 3rem;
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            padding: 2.5rem;
+            border-radius: 16px;
+            margin-top: 4rem;
             border: 1px solid #cbd5e1;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
         }
         .sources h4 {
             color: #334155;
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            font-size: 1.25rem;
+            font-weight: 600;
         }
         .source-list {
             list-style: none;
             padding: 0;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             color: #475569;
         }
         .source-list li {
-            padding: 0.5rem 0;
+            padding: 0.75rem 0;
             border-bottom: 1px solid #e2e8f0;
         }
         .source-list li:last-child {
@@ -244,29 +298,236 @@
             text-align: center;
             color: #64748b;
             font-style: italic;
-            margin-top: 1.5rem;
-            font-size: 0.9rem;
-            padding-top: 1rem;
-            border-top: 1px solid #e2e8f0;
+            margin-top: 2rem;
+            font-size: 0.95rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e2e8f0;
+            font-weight: 500;
         }
         .section-header {
             color: #1e40af;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
-            margin: 2.5rem 0 1.5rem 0;
+            margin: 4rem 0 2rem 0;
             border-bottom: 3px solid #3b82f6;
-            padding-bottom: 0.5rem;
+            padding-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+        
+        /* Modal Styles */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            z-index: 1000;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+            animation: slideIn 0.3s ease;
+            position: relative;
+        }
+        
+        .modal-header {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
+            color: white;
+            padding: 2rem 2.5rem 1.5rem;
+            border-radius: 20px 20px 0 0;
+            position: relative;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 50%;
+            transition: background 0.2s ease;
+        }
+        
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .modal-body {
+            padding: 2.5rem;
+        }
+        
+        .transport-options {
+            display: grid;
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .transport-option {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            border-left: 4px solid #3b82f6;
+        }
+        
+        .transport-option:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            border-left-color: #1e40af;
+        }
+        
+        .transport-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .transport-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            background: linear-gradient(135deg, #3b82f6, #1e40af);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .transport-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e40af;
+            margin: 0;
+        }
+        
+        .transport-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .detail-box {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .detail-label {
+            font-size: 0.85rem;
+            color: #6b7280;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.25rem;
+        }
+        
+        .detail-value {
+            font-size: 1rem;
+            color: #1f2937;
+            font-weight: 600;
+        }
+        
+        .cost-highlight {
+            color: #059669;
+            font-weight: 700;
+        }
+        
+        .time-highlight {
+            color: #dc2626;
+            font-weight: 700;
+        }
+        
+        .clickable-hotel {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .clickable-hotel::after {
+            content: "🔍 Click for transport details";
+            position: absolute;
+            bottom: 1rem;
+            right: 1.5rem;
+            background: rgba(59, 130, 246, 0.9);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .clickable-hotel:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideIn {
+            from { transform: scale(0.9) translateY(-20px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+        
+        @media (max-width: 768px) {
+            .modal-content {
+                margin: 1rem;
+                max-height: 95vh;
+            }
+            
+            .modal-header, .modal-body {
+                padding: 1.5rem;
+            }
+            
+            .transport-details {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="price-check-banner">
+            📊 Prices checked by <span class="highlight">Tycho Löke</span> on <span class="highlight">August 4th, 2025</span> • Real-time availability for ChannelCon EMEA dates
+        </div>
+        
         <div class="header">
             <div class="header-content">
                 <h1>ChannelCon EMEA 2025</h1>
                 <div class="subtitle">Accommodation Guide & Travel Information</div>
                 <div class="gtia-brand">Powered by Global Technology Industry Association (GTIA)</div>
             </div>
+            
+            <h2 class="section-header">🏨 Accommodation Options</h2>
         </div>
         
         <div class="content">
@@ -287,6 +548,15 @@
                     </div>
                 </div>
                 <p style="margin-top: 1.5rem; font-style: italic;">The premier vendor-neutral European event for IT channel executives and professionals to evolve your business and career. <strong>Relationships matter and ChannelCon EMEA is where you'll find your people.</strong></p>
+                
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="https://channelcon.gtia.org/emea" target="_blank" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 0.5rem; display: inline-block; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);">
+                        🎟️ Register for ChannelCon EMEA
+                    </a>
+                    <a href="https://channelcon.gtia.org/emea" target="_blank" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%); color: white; padding: 1rem 2rem; border-radius: 8px; text-decoration: none; font-weight: 600; margin: 0.5rem; display: inline-block; transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(5, 150, 105, 0.3);">
+                        📋 View Full Event Details
+                    </a>
+                </div>
             </div>
 
             <div class="gtia-rates">
@@ -299,7 +569,187 @@
                 💰 Save £100+ per night with alternative accommodations while maintaining easy access to Terminal 5!
             </div>
 
-            <h2 class="section-header">🏨 Accommodation Options</h2>
+            <h2 class="section-header">🎯 What to Expect at ChannelCon EMEA</h2>
+            
+            <div class="transport-grid" style="margin: 2.5rem 0;">
+                <div class="transport-item" style="background: linear-gradient(135deg, #fef3c7 0%, #fef7cd 100%); border: 1px solid #f59e0b; border-left: 4px solid #f59e0b;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <span style="font-size: 1.5rem; margin-right: 0.75rem;">🎓</span>
+                        <strong style="color: #92400e;">Education Tracks</strong>
+                    </div>
+                    Quality, highly relevant education including exclusive content based on GTIA proprietary research. Channel Insights and Technology Trends tracks.
+                </div>
+                <div class="transport-item" style="background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%); border: 1px solid #3b82f6; border-left: 4px solid #3b82f6;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <span style="font-size: 1.5rem; margin-right: 0.75rem;">🤝</span>
+                        <strong style="color: #1e40af;">Networking</strong>
+                    </div>
+                    Connect with MSPs, vendors, distributors and tech industry experts. Build meaningful business relationships.
+                </div>
+                <div class="transport-item" style="background: linear-gradient(135deg, #f3e8ff 0%, #faf5ff 100%); border: 1px solid #8b5cf6; border-left: 4px solid #8b5cf6;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <span style="font-size: 1.5rem; margin-right: 0.75rem;">🏢</span>
+                        <strong style="color: #7c3aed;">Technology Vendor Fair</strong>
+                    </div>
+                    Equal space and opportunity for all vendors. Discover new partners and solutions in a vendor-neutral environment.
+                </div>
+                <div class="transport-item" style="background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%); border: 1px solid #22c55e; border-left: 4px solid #22c55e;">
+                    <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                        <span style="font-size: 1.5rem; margin-right: 0.75rem;">🛡️</span>
+                        <strong style="color: #059669;">Cybersecurity Focus</strong>
+                    </div>
+                    Learn from security leaders about the latest threats and proactive response strategies for your business.
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #f1f5f9 0%, #f8fafc 100%); padding: 2.5rem; border-radius: 16px; margin: 3rem 0; border: 1px solid #cbd5e1; box-shadow: 0 4px 20px rgba(0,0,0,0.05);">
+                <h3 style="color: #1e40af; margin-top: 0; display: flex; align-items: center; font-size: 1.5rem;">
+                    <span style="font-size: 2rem; margin-right: 1rem;">💬</span>
+                    What Attendees Say
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+                    <div style="background: white; padding: 2rem; border-radius: 12px; border-left: 4px solid #3b82f6; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-style: italic; color: #374151; line-height: 1.7; margin-bottom: 1rem;">
+                            "A very well-organised event with lots of insightful talks. I loved the networking element most and sharing knowledge with other industry experts."
+                        </div>
+                        <div style="text-align: right; color: #6b7280; font-size: 0.9rem;">— ChannelCon EMEA Attendee</div>
+                    </div>
+                    <div style="background: white; padding: 2rem; border-radius: 12px; border-left: 4px solid #059669; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <div style="font-style: italic; color: #374151; line-height: 1.7; margin-bottom: 1rem;">
+                            "Great panel discussions, lots of insights from different speakers. The knowledge base and learning how the MSP industry works - ChannelCon does an incredible job."
+                        </div>
+                        <div style="text-align: right; color: #6b7280; font-size: 0.9rem;">— ChannelCon EMEA Attendee</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="section-header">💰 Current Pricing & Availability (October 12-15, 2025)</h2>
+            
+            <div style="background: linear-gradient(135deg, #fef3c7 0%, #fef7cd 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid #f59e0b;">
+                <h3 style="color: #92400e; margin-top: 0;">📊 Price Ranges for ChannelCon EMEA Dates</h3>
+                <div class="hotel-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+                        <strong style="color: #7c3aed;">Sofitel London Heathrow T5</strong><br>
+                        <span style="color: #dc2626; font-size: 1.1rem;">Standard: £300-400+ per night</span><br>
+                        <span style="color: #059669; font-size: 1.2rem; font-weight: bold;">GTIA Rate: £189 per night*</span><br>
+                        <small>*Limited availability, includes breakfast</small>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+                        <strong style="color: #3b82f6;">Premier Inn Terminal 4</strong><br>
+                        <span style="color: #059669; font-size: 1.1rem;">£70 per night</span><br>
+                        <small>✅ Available - Excellent value</small>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+                        <strong style="color: #f59e0b;">Thistle London Heathrow T5</strong><br>
+                        <span style="color: #059669; font-size: 1.1rem;">£82-136 per night</span><br>
+                        <small>✅ Available - Pod service included</small>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+                        <strong style="color: #3b82f6;">Holiday Inn Express T4</strong><br>
+                        <span style="color: #059669; font-size: 1.1rem;">£82-115 per night</span><br>
+                        <small>✅ Available - Includes breakfast</small>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+                        <strong style="color: #3b82f6;">Premier Inn Bath Road</strong><br>
+                        <span style="color: #059669; font-size: 1.1rem;">£70 per night</span><br>
+                        <small>✅ Available - Near T2/T3</small>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+                        <strong style="color: #3b82f6;">Premier Inn Terminal 5</strong><br>
+                        <span style="color: #059669; font-size: 1.1rem;">£85 per night</span><br>
+                        <small>✅ Available - Close to T5</small>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 8px; border: 2px solid #dc2626;">
+                        <strong style="color: #dc2626;">⚠️ UNAVAILABLE</strong><br>
+                        <span style="color: #6b7280; text-decoration: line-through;">DoubleTree by Hilton</span><br>
+                        <span style="color: #6b7280; text-decoration: line-through;">Ibis Budget T5</span><br>
+                        <small style="color: #dc2626;">Fully booked for these dates</small>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%); padding: 2.5rem; border-radius: 16px; margin: 3rem 0; border: 1px solid #3b82f6; box-shadow: 0 4px 20px rgba(59, 130, 246, 0.1);">
+                <h3 style="color: #1e40af; margin-top: 0; display: flex; align-items: center; font-size: 1.5rem;">
+                    <span style="font-size: 2rem; margin-right: 1rem;">🔍</span>
+                    How to Check Real-Time Availability
+                </h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 1.5rem;">
+                    <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-left: 4px solid #059669;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 1.25rem; margin-right: 0.5rem;">🏨</span>
+                            <strong style="color: #059669;">Direct Hotel Booking:</strong>
+                        </div>
+                        <div style="color: #374151; line-height: 1.6;">
+                            • Sofitel: sofitel.accor.com<br>
+                            • Thistle: thistle.com<br>
+                            • Premier Inn: premierinn.com
+                        </div>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-left: 4px solid #3b82f6;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 1.25rem; margin-right: 0.5rem;">🔍</span>
+                            <strong style="color: #3b82f6;">Comparison Sites:</strong>
+                        </div>
+                        <div style="color: #374151; line-height: 1.6;">
+                            • Booking.com<br>
+                            • Hotels.com<br>
+                            • Expedia.com
+                        </div>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-left: 4px solid #7c3aed;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 1.25rem; margin-right: 0.5rem;">👥</span>
+                            <strong style="color: #7c3aed;">GTIA Members:</strong>
+                        </div>
+                        <div style="color: #374151; line-height: 1.6;">
+                            Contact GTIA directly for:<br>
+                            • Negotiated rates at Sofitel<br>
+                            • Group booking assistance
+                        </div>
+                    </div>
+                    <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); border-left: 4px solid #f59e0b;">
+                        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                            <span style="font-size: 1.25rem; margin-right: 0.5rem;">⚠️</span>
+                            <strong style="color: #f59e0b;">Peak Demand Notice:</strong>
+                        </div>
+                        <div style="color: #374151; line-height: 1.6;">
+                            ChannelCon dates may have:<br>
+                            • Higher demand<br>
+                            • Limited availability<br>
+                            • Book early for best rates
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%); padding: 2rem; border-radius: 16px; margin: 2.5rem 0; border-left: 6px solid #22c55e; box-shadow: 0 4px 20px rgba(34, 197, 94, 0.1);">
+                <h4 style="color: #059669; margin-top: 0; display: flex; align-items: center; font-size: 1.25rem;">
+                    <span style="font-size: 1.5rem; margin-right: 0.75rem;">💡</span>
+                    Smart Booking Tips for October 12-15, 2025
+                </h4>
+                <ul style="margin: 1rem 0; color: #047857; line-height: 1.7; list-style: none; padding: 0;">
+                    <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: #22c55e;">✓</span>
+                        <strong>Book Early:</strong> ChannelCon EMEA is a major industry event - rooms fill up quickly
+                    </li>
+                    <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: #22c55e;">✓</span>
+                        <strong>GTIA Members:</strong> Secure the £189 Sofitel rate through official channels
+                    </li>
+                    <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: #22c55e;">✓</span>
+                        <strong>Flexible Dates:</strong> Consider arriving October 11th or staying until October 16th for better rates
+                    </li>
+                    <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: #22c55e;">✓</span>
+                        <strong>Package Deals:</strong> Many hotels offer parking + accommodation bundles
+                    </li>
+                    <li style="margin-bottom: 0.75rem; padding-left: 1.5rem; position: relative;">
+                        <span style="position: absolute; left: 0; color: #22c55e;">✓</span>
+                        <strong>Cancellation Policies:</strong> Book refundable rates when possible given event schedules
+                    </li>
+                </ul>
+            </div>
             
             <div class="hotel-grid">
                 <div class="hotel-card">
@@ -321,7 +771,7 @@
                 <div class="hotel-card">
                     <div class="hotel-name">Premier Inn Heathrow Terminal 4</div>
                     <span class="badge best-value">Best Value Alternative</span>
-                    <div class="price">£77 per night</div>
+                    <div class="price">£70 per night</div>
                     <div class="commute">🚶‍♂️ 6-min walk + 🚇 Free inter-terminal train (15 mins total to T5)</div>
                     <ul class="features">
                         <li>Covered walkway to Terminal 4</li>
@@ -335,7 +785,7 @@
                 <div class="hotel-card">
                     <div class="hotel-name">Thistle London Heathrow T5</div>
                     <span class="badge most-convenient">Most Convenient Alternative</span>
-                    <div class="price">£78-85 per night</div>
+                    <div class="price">£82-136 per night</div>
                     <div class="commute">🚁 5-minute automated Pod service directly to Terminal 5</div>
                     <ul class="features">
                         <li>Exclusive Pod transportation (£5 per person)</li>
@@ -346,23 +796,21 @@
                     </ul>
                 </div>
 
-                <div class="hotel-card">
-                    <div class="hotel-name">Ibis Budget London Heathrow T5</div>
-                    <span class="badge budget">Budget Option</span>
-                    <div class="price">£60-70 per night</div>
-                    <div class="commute">🚌 Hoppa bus service (20-40 mins, £6.80 one way)</div>
-                    <ul class="features">
-                        <li>Most affordable option</li>
-                        <li>1 mile from Terminal 5</li>
-                        <li>On-site parking £5 per 24 hours</li>
-                        <li>Modern British restaurant on-site</li>
-                        <li>Free high-speed WiFi</li>
-                    </ul>
+                <div class="hotel-card" style="border: 2px solid #dc2626; background: #fef2f2;">
+                    <div class="hotel-name" style="color: #dc2626;">⚠️ Unavailable for Oct 12-15</div>
+                    <span class="badge" style="background: #dc2626;">Fully Booked</span>
+                    <div style="color: #6b7280; text-decoration: line-through; margin: 1rem 0;">
+                        • Ibis Budget London Heathrow T5<br>
+                        • DoubleTree by Hilton Heathrow
+                    </div>
+                    <div style="color: #dc2626; font-size: 0.9rem; font-style: italic;">
+                        These hotels are fully booked for ChannelCon EMEA dates. Consider the available alternatives above or check nearby options.
+                    </div>
                 </div>
 
                 <div class="hotel-card">
                     <div class="hotel-name">Holiday Inn Express Terminal 4</div>
-                    <div class="price">£115 per night</div>
+                    <div class="price">£82-115 per night</div>
                     <div class="commute">🚶‍♂️ Walk to T4 + 🚇 Free train connection to T5</div>
                     <ul class="features">
                         <li>Complimentary Express Start breakfast</li>
@@ -374,38 +822,118 @@
                 </div>
 
                 <div class="hotel-card">
-                    <div class="hotel-name">DoubleTree by Hilton Heathrow</div>
-                    <div class="price">£77 per night</div>
-                    <div class="commute">🚌 Hoppa bus service to all terminals</div>
+                    <div class="hotel-name">Premier Inn Bath Road (T2/T3)</div>
+                    <div class="price">£70 per night</div>
+                    <div class="commute">🚌 Bus links to T2/T3, then free train to T5</div>
                     <ul class="features">
-                        <li>80% customer satisfaction rating</li>
-                        <li>Full-service hotel amenities</li>
-                        <li>Indoor pool and fitness center</li>
-                        <li>Multiple dining options</li>
-                        <li>Hilton Honors benefits</li>
+                        <li>Excellent value for money</li>
+                        <li>Near Harmondsworth village pubs</li>
+                        <li>Free inter-terminal connections</li>
+                        <li>Premier Inn quality guarantee</li>
+                        <li>Good transport links</li>
+                    </ul>
+                </div>
+
+                <div class="hotel-card">
+                    <div class="hotel-name">Premier Inn Terminal 5</div>
+                    <div class="price">£85 per night</div>
+                    <div class="commute">🚌 Hoppa bus service to T5 (10-15 mins)</div>
+                    <ul class="features">
+                        <li>Closest Premier Inn to Terminal 5</li>
+                        <li>Reliable bus connections</li>
+                        <li>5-star bed comfort rating</li>
+                        <li>On-site restaurant and bar</li>
+                        <li>Family-friendly facilities</li>
                     </ul>
                 </div>
             </div>
 
             <div class="transport-info">
-                <h3 style="color: #059669; margin-top: 0;">🚊 Transportation & Connectivity</h3>
+                <h3 style="color: #059669; margin-top: 0; display: flex; align-items: center; font-size: 1.5rem;">
+                    <span style="font-size: 2rem; margin-right: 1rem;">🚊</span>
+                    Transportation & Connectivity
+                </h3>
                 <div class="transport-grid">
-                    <div class="transport-item">
-                        <strong>Inter-Terminal Connections</strong><br>
+                    <div class="transport-item" style="border-left: 4px solid #3b82f6;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.25rem; margin-right: 0.5rem;">🚇</span>
+                            <strong style="color: #1e40af;">Inter-Terminal Connections</strong>
+                        </div>
                         Free Heathrow Express and Underground trains connect all terminals every 15 minutes
                     </div>
-                    <div class="transport-item">
-                        <strong>Early Morning Service</strong><br>
+                    <div class="transport-item" style="border-left: 4px solid #f59e0b;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.25rem; margin-right: 0.5rem;">🌅</span>
+                            <strong style="color: #d97706;">Early Morning Service</strong>
+                        </div>
                         Buses run between terminals from 3:51 AM for early departures and late arrivals
                     </div>
-                    <div class="transport-item">
-                        <strong>Hoppa Bus Service</strong><br>
+                    <div class="transport-item" style="border-left: 4px solid #8b5cf6;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.25rem; margin-right: 0.5rem;">🚌</span>
+                            <strong style="color: #7c3aed;">Hoppa Bus Service</strong>
+                        </div>
                         Airport-operated shuttle buses connect most hotels to all terminals (£6.80 one way)
                     </div>
-                    <div class="transport-item">
-                        <strong>Pod Service (Unique)</strong><br>
+                    <div class="transport-item" style="border-left: 4px solid #dc2626;">
+                        <div style="display: flex; align-items: center; margin-bottom: 0.75rem;">
+                            <span style="font-size: 1.25rem; margin-right: 0.5rem;">🚁</span>
+                            <strong style="color: #dc2626;">Pod Service (Unique)</strong>
+                        </div>
                         Exclusive to Thistle T5 - automated driverless capsules directly to Terminal 5
                     </div>
+                </div>
+            </div>
+
+            <h2 class="section-header">📝 Registration & Practical Information</h2>
+            
+            <div class="hotel-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));">
+                <div class="hotel-card" style="border-left: 6px solid #059669;">
+                    <div class="hotel-name" style="color: #059669;">GTIA Members</div>
+                    <div class="price" style="color: #059669;">FREE Registration</div>
+                    <ul class="features">
+                        <li>All employees of member companies can register for free</li>
+                        <li>Bring the whole team!</li>
+                        <li>Access to all sessions and networking events</li>
+                        <li>Exclusive GTIA member benefits</li>
+                    </ul>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://channelcon.gtia.org/emea" target="_blank" style="background: #059669; color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block;">Register Now</a>
+                    </div>
+                </div>
+                
+                <div class="hotel-card" style="border-left: 6px solid #1e40af;">
+                    <div class="hotel-name" style="color: #1e40af;">Non-Members</div>
+                    <div class="price" style="color: #1e40af;">Registration Available</div>
+                    <ul class="features">
+                        <li>Individual registration options available</li>
+                        <li>Special rates for students and military</li>
+                        <li>Must be 18+ and affiliated with IT industry</li>
+                        <li>Government-issued photo ID required</li>
+                    </ul>
+                    <div style="margin-top: 1rem;">
+                        <a href="https://channelcon.gtia.org/plan-your-visit/pricing" target="_blank" style="background: #1e40af; color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; display: inline-block;">View Pricing</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="background: linear-gradient(135deg, #fef3c7 0%, #fef7cd 100%); padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid #f59e0b; text-align: center;">
+                <h3 style="color: #92400e; margin-top: 0;">✈️ Getting to London Heathrow</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div><strong>Heathrow Express:</strong><br>21 minutes to London Paddington</div>
+                    <div><strong>Elizabeth Line:</strong><br>40 minutes to Bond Street</div>
+                    <div><strong>Piccadilly Line:</strong><br>60 minutes to King's Cross</div>
+                    <div><strong>M25/M4 Access:</strong><br>Direct motorway connections</div>
+                </div>
+            </div>
+
+            <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; margin: 2rem 0; border: 1px solid #cbd5e1; text-align: center;">
+                <h3 style="color: #334155; margin-top: 0;">📞 Contact & Support</h3>
+                <p>For event questions, contact GTIA at <strong>channelcon@gtia.org</strong></p>
+                <p>For accommodation assistance or special requirements, please reach out to the event team.</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://gtia.org" target="_blank" style="background: #334155; color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; margin: 0.5rem; display: inline-block;">Visit GTIA.org</a>
+                    <a href="https://channelcon.gtia.org/emea" target="_blank" style="background: #1e40af; color: white; padding: 0.8rem 1.5rem; border-radius: 6px; text-decoration: none; font-weight: 600; margin: 0.5rem; display: inline-block;">Event Homepage</a>
                 </div>
             </div>
 
@@ -429,5 +957,272 @@
             </div>
         </div>
     </div>
+
+    <!-- Transport Modal -->
+    <div id="transportModal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+                <h2 id="modalHotelName" style="margin: 0; font-size: 1.8rem; font-weight: 700;">Hotel Transport Options</h2>
+                <p id="modalHotelAddress" style="margin: 0.5rem 0 0 0; opacity: 0.9; font-size: 1rem;"></p>
+            </div>
+            <div class="modal-body">
+                <div id="transportOptionsContainer" class="transport-options">
+                    <!-- Transport options will be populated here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const hotelData = {
+            'sofitel': {
+                name: 'Sofitel London Heathrow T5',
+                address: 'Terminal 5, London Heathrow Airport, TW6 2GD',
+                transport: [
+                    {
+                        icon: '🚶‍♂️',
+                        title: 'Walking (Covered Walkway)',
+                        details: [
+                            { label: 'Duration', value: '5 minutes', class: 'time-highlight' },
+                            { label: 'Cost', value: 'FREE', class: 'cost-highlight' },
+                            { label: 'Route', value: 'Direct covered walkway to T5' },
+                            { label: 'Availability', value: '24/7' }
+                        ]
+                    }
+                ]
+            },
+            'premier-t4': {
+                name: 'Premier Inn Heathrow Terminal 4',
+                address: 'Sheffield Road, London Heathrow Airport, TW6 3AF',
+                transport: [
+                    {
+                        icon: '🚶‍♂️',
+                        title: 'Walking + Free Train',
+                        details: [
+                            { label: 'Total Duration', value: '15 minutes', class: 'time-highlight' },
+                            { label: 'Cost', value: 'FREE', class: 'cost-highlight' },
+                            { label: 'Route', value: '6-min walk to T4 + Heathrow Express to T5' },
+                            { label: 'Frequency', value: 'Every 15 minutes' }
+                        ]
+                    },
+                    {
+                        icon: '🚕',
+                        title: 'Taxi / Uber',
+                        details: [
+                            { label: 'Duration', value: '8-12 minutes', class: 'time-highlight' },
+                            { label: 'Taxi Cost', value: '£15-20', class: 'cost-highlight' },
+                            { label: 'Uber Cost', value: '£12-18', class: 'cost-highlight' },
+                            { label: 'Distance', value: '3.2 miles' }
+                        ]
+                    },
+                    {
+                        icon: '🚌',
+                        title: 'Hotel Hoppa Bus',
+                        details: [
+                            { label: 'Duration', value: '15-20 minutes', class: 'time-highlight' },
+                            { label: 'Cost', value: '£6.80', class: 'cost-highlight' },
+                            { label: 'Route', value: 'H30 Bus to T5' },
+                            { label: 'Frequency', value: 'Every 30 minutes' }
+                        ]
+                    }
+                ]
+            },
+            'thistle': {
+                name: 'Thistle London Heathrow T5',
+                address: 'Bath Road, Longford, West Drayton UB7 0EQ',
+                transport: [
+                    {
+                        icon: '🚁',
+                        title: 'Heathrow Pod (Exclusive)',
+                        details: [
+                            { label: 'Duration', value: '5 minutes', class: 'time-highlight' },
+                            { label: 'Cost', value: '£5 per person', class: 'cost-highlight' },
+                            { label: 'Route', value: 'Automated driverless pod to T5' },
+                            { label: 'Operating Hours', value: '4:00 AM - 12:15 AM' }
+                        ]
+                    },
+                    {
+                        icon: '🚌',
+                        title: 'Public Bus 423',
+                        details: [
+                            { label: 'Duration', value: '8-10 minutes', class: 'time-highlight' },
+                            { label: 'Cost', value: '£2.80', class: 'cost-highlight' },
+                            { label: 'Route', value: 'Bus 423 direct to T5' },
+                            { label: 'Frequency', value: 'Every 10-15 minutes' }
+                        ]
+                    },
+                    {
+                        icon: '🚕',
+                        title: 'Taxi / Uber',
+                        details: [
+                            { label: 'Duration', value: '10-15 minutes', class: 'time-highlight' },
+                            { label: 'Taxi Cost', value: '£18-25', class: 'cost-highlight' },
+                            { label: 'Uber Cost', value: '£15-22', class: 'cost-highlight' },
+                            { label: 'Distance', value: '4.1 miles' }
+                        ]
+                    }
+                ]
+            },
+            'holiday-inn-express': {
+                name: 'Holiday Inn Express Terminal 4',
+                address: 'Terminal 4, London Heathrow Airport, TW6 3AF',
+                transport: [
+                    {
+                        icon: '🚶‍♂️',
+                        title: 'Walking + Free Train',
+                        details: [
+                            { label: 'Total Duration', value: '18 minutes', class: 'time-highlight' },
+                            { label: 'Cost', value: 'FREE', class: 'cost-highlight' },
+                            { label: 'Route', value: '8-min walk to T4 + Heathrow Express to T5' },
+                            { label: 'Frequency', value: 'Every 15 minutes' }
+                        ]
+                    },
+                    {
+                        icon: '🚕',
+                        title: 'Taxi / Uber',
+                        details: [
+                            { label: 'Duration', value: '8-12 minutes', class: 'time-highlight' },
+                            { label: 'Taxi Cost', value: '£15-20', class: 'cost-highlight' },
+                            { label: 'Uber Cost', value: '£12-18', class: 'cost-highlight' },
+                            { label: 'Distance', value: '3.2 miles' }
+                        ]
+                    },
+                    {
+                        icon: '🚌',
+                        title: 'Hotel Hoppa Bus',
+                        details: [
+                            { label: 'Duration', value: '15-20 minutes', class: 'time-highlight' },
+                            { label: 'Cost', value: '£6.80', class: 'cost-highlight' },
+                            { label: 'Route', value: 'H30 Bus to T5' },
+                            { label: 'Frequency', value: 'Every 30 minutes' }
+                        ]
+                    }
+                ]
+            },
+            'premier-bath-road': {
+                name: 'Premier Inn Bath Road (T2/T3)',
+                address: 'Bath Road, Hounslow, London TW5 9QE',
+                transport: [
+                    {
+                        icon: '🚌',
+                        title: 'Public Bus + Free Train',
+                        details: [
+                            { label: 'Total Duration', value: '25-30 minutes', class: 'time-highlight' },
+                            { label: 'Cost', value: '£2.80', class: 'cost-highlight' },
+                            { label: 'Route', value: 'Bus 423 to T2/T3 + Heathrow Express to T5' },
+                            { label: 'Frequency', value: 'Every 10-15 minutes' }
+                        ]
+                    },
+                    {
+                        icon: '🚕',
+                        title: 'Taxi / Uber',
+                        details: [
+                            { label: 'Duration', value: '15-20 minutes', class: 'time-highlight' },
+                            { label: 'Taxi Cost', value: '£20-28', class: 'cost-highlight' },
+                            { label: 'Uber Cost', value: '£18-25', class: 'cost-highlight' },
+                            { label: 'Distance', value: '4.8 miles' }
+                        ]
+                    },
+                    {
+                        icon: '🚌',
+                        title: 'Hotel Hoppa Bus',
+                        details: [
+                            { label: 'Duration', value: '20-25 minutes', class: 'time-highlight' },
+                            { label: 'Cost', value: '£6.80', class: 'cost-highlight' },
+                            { label: 'Route', value: 'H2B Bus to T5' },
+                            { label: 'Frequency', value: 'Every 30 minutes' }
+                        ]
+                    }
+                ]
+            },
+            'premier-t5': {
+                name: 'Premier Inn Terminal 5',
+                address: 'Bath Road, Colnbrook, Slough SL3 0NF',
+                transport: [
+                    {
+                        icon: '🚌',
+                        title: 'Hotel Hoppa Bus',
+                        details: [
+                            { label: 'Duration', value: '10-15 minutes', class: 'time-highlight' },
+                            { label: 'Cost', value: '£6.80', class: 'cost-highlight' },
+                            { label: 'Route', value: 'H5B Bus direct to T5' },
+                            { label: 'Frequency', value: 'Every 20-30 minutes' }
+                        ]
+                    },
+                    {
+                        icon: '🚌',
+                        title: 'Public Bus 350',
+                        details: [
+                            { label: 'Duration', value: '8-12 minutes', class: 'time-highlight' },
+                            { label: 'Cost', value: '£2.80', class: 'cost-highlight' },
+                            { label: 'Route', value: 'Bus 350 direct to T5' },
+                            { label: 'Frequency', value: 'Every 20 minutes' }
+                        ]
+                    },
+                    {
+                        icon: '🚕',
+                        title: 'Taxi / Uber',
+                        details: [
+                            { label: 'Duration', value: '8-12 minutes', class: 'time-highlight' },
+                            { label: 'Taxi Cost', value: '£12-18', class: 'cost-highlight' },
+                            { label: 'Uber Cost', value: '£10-15', class: 'cost-highlight' },
+                            { label: 'Distance', value: '2.1 miles' }
+                        ]
+                    }
+                ]
+            }
+        };
+
+        function openTransportModal(hotelId) {
+            const hotel = hotelData[hotelId];
+            if (!hotel) return;
+
+            document.getElementById('modalHotelName').textContent = hotel.name;
+            document.getElementById('modalHotelAddress').textContent = hotel.address;
+
+            const container = document.getElementById('transportOptionsContainer');
+            container.innerHTML = '';
+
+            hotel.transport.forEach(option => {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'transport-option';
+                
+                optionDiv.innerHTML = `
+                    <div class="transport-header">
+                        <div class="transport-icon">${option.icon}</div>
+                        <h4 class="transport-title">${option.title}</h4>
+                    </div>
+                    <div class="transport-details">
+                        ${option.details.map(detail => `
+                            <div class="detail-box">
+                                <div class="detail-label">${detail.label}</div>
+                                <div class="detail-value ${detail.class || ''}">${detail.value}</div>
+                            </div>
+                        `).join('')}
+                    </div>
+                `;
+                
+                container.appendChild(optionDiv);
+            });
+
+            document.getElementById('transportModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event) {
+            if (event && event.target !== event.currentTarget && event.type !== 'click') return;
+            
+            document.getElementById('transportModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
 </body>
 </html>
