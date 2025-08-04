@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChannelCon EMEA 2025 - Accommodation Guide | GTIA</title>
+    <style>
+        body {
+            font-family: 'Arial', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 2.5rem 2rem;
+            position: relative;
+        }
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
+        }
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 1.3rem;
+            margin-top: 0.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+        .gtia-brand {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #e2e8f0;
+        }
+        .content {
+            padding: 2.5rem;
+        }
+        .event-info {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 2.5rem;
+            border: 1px solid #0ea5e9;
+            border-left: 6px solid #0ea5e9;
+        }
+        .event-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .detail-item {
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+        }
+        .detail-item strong {
+            color: #1e40af;
+            margin-right: 0.5rem;
+        }
+        .savings-highlight {
+            background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 2.5rem 0;
+            font-weight: 600;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+        }
+        .gtia-rates {
+            background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+        .hotel-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+        .hotel-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            background: white;
+            position: relative;
+            overflow: hidden;
+        }
+        .hotel-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #3b82f6, #1e40af);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .hotel-card:hover::before {
+            transform: scaleX(1);
+        }
+        .hotel-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            border-color: #3b82f6;
+        }
+        .hotel-name {
+            color: #1e40af;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+        .price {
+            color: #059669;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin: 1rem 0;
+        }
+        .price.expensive {
+            color: #dc2626;
+        }
+        .price.gtia-negotiated {
+            color: #7c3aed;
+        }
+        .commute {
+            background: #f1f5f9;
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+            border-left: 4px solid #3b82f6;
+        }
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f1f5f9;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+        .features li:before {
+            content: "✓";
+            color: #059669;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        .badge {
+            display: inline-block;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 0.3rem 0.3rem 1rem 0;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .badge.official { background: #7c3aed; }
+        .badge.gtia-rates { background: #059669; }
+        .badge.best-value { background: #0ea5e9; }
+        .badge.most-convenient { background: #f59e0b; }
+        .badge.budget { background: #8b5cf6; }
+        .transport-info {
+            background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 2.5rem 0;
+            border: 1px solid #22c55e;
+            border-left: 6px solid #22c55e;
+        }
+        .transport-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        .transport-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #d1fae5;
+        }
+        .sources {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 12px;
+            margin-top: 3rem;
+            border: 1px solid #cbd5e1;
+        }
+        .sources h4 {
+            color: #334155;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        .source-list {
+            list-style: none;
+            padding: 0;
+            font-size: 0.9rem;
+            color: #475569;
+        }
+        .source-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        .source-list li:last-child {
+            border-bottom: none;
+        }
+        .last-updated {
+            text-align: center;
+            color: #64748b;
+            font-style: italic;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        .section-header {
+            color: #1e40af;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 2.5rem 0 1.5rem 0;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-content">
+                <h1>ChannelCon EMEA 2025</h1>
+                <div class="subtitle">Accommodation Guide & Travel Information</div>
+                <div class="gtia-brand">Powered by Global Technology Industry Association (GTIA)</div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <div class="event-info">
+                <h2 style="color: #1e40af; margin-top: 0;">📍 Event Information</h2>
+                <div class="event-details">
+                    <div class="detail-item">
+                        <strong>📅 Dates:</strong> October 13-14, 2025
+                    </div>
+                    <div class="detail-item">
+                        <strong>🏨 Venue:</strong> Sofitel London Heathrow, Terminal 5
+                    </div>
+                    <div class="detail-item">
+                        <strong>📍 Address:</strong> Terminal 5, London Heathrow Airport, TW6 2GD
+                    </div>
+                    <div class="detail-item">
+                        <strong>🎯 Focus:</strong> IT Channel Professionals - MSPs, Vendors, Distributors
+                    </div>
+                </div>
+                <p style="margin-top: 1.5rem; font-style: italic;">The premier vendor-neutral European event for IT channel executives and professionals to evolve your business and career. <strong>Relationships matter and ChannelCon EMEA is where you'll find your people.</strong></p>
+            </div>
+
+            <div class="gtia-rates">
+                <h3 style="margin-top: 0;">🏆 GTIA Negotiated Rates Available</h3>
+                <p><strong>GTIA has secured a limited number of rooms at £189.00*</strong><br>
+                <small>*Inclusive of breakfast, exclusive of VAT | Available to GTIA members and ChannelCon EMEA attendees</small></p>
+            </div>
+
+            <div class="savings-highlight">
+                💰 Save £100+ per night with alternative accommodations while maintaining easy access to Terminal 5!
+            </div>
+
+            <h2 class="section-header">🏨 Accommodation Options</h2>
+            
+            <div class="hotel-grid">
+                <div class="hotel-card">
+                    <div class="hotel-name">Sofitel London Heathrow T5</div>
+                    <span class="badge official">Official Venue</span>
+                    <span class="badge gtia-rates">GTIA Rates Available</span>
+                    <div class="price gtia-negotiated">£189 per night*</div>
+                    <div style="font-size: 0.9rem; color: #6b7280; margin-bottom: 1rem;">*GTIA negotiated rate (limited availability)<br>Standard rate: £300+</div>
+                    <div class="commute">🚶‍♂️ Direct connection via 5-minute covered walkway to Terminal 5</div>
+                    <ul class="features">
+                        <li>Only hotel directly connected to T5</li>
+                        <li>5-star luxury amenities & spa</li>
+                        <li>2 AA Rosette restaurants</li>
+                        <li>Underground parking available</li>
+                        <li>Business center & meeting rooms</li>
+                    </ul>
+                </div>
+
+                <div class="hotel-card">
+                    <div class="hotel-name">Premier Inn Heathrow Terminal 4</div>
+                    <span class="badge best-value">Best Value Alternative</span>
+                    <div class="price">£77 per night</div>
+                    <div class="commute">🚶‍♂️ 6-min walk + 🚇 Free inter-terminal train (15 mins total to T5)</div>
+                    <ul class="features">
+                        <li>Covered walkway to Terminal 4</li>
+                        <li>Free Heathrow Connect to T5</li>
+                        <li>79% customer satisfaction rating</li>
+                        <li>5-star bed comfort rating</li>
+                        <li>Premier Inn quality guarantee</li>
+                    </ul>
+                </div>
+
+                <div class="hotel-card">
+                    <div class="hotel-name">Thistle London Heathrow T5</div>
+                    <span class="badge most-convenient">Most Convenient Alternative</span>
+                    <div class="price">£78-85 per night</div>
+                    <div class="commute">🚁 5-minute automated Pod service directly to Terminal 5</div>
+                    <ul class="features">
+                        <li>Exclusive Pod transportation (£5 per person)</li>
+                        <li>Only hotel with Pod system access</li>
+                        <li>Direct automated service to T5</li>
+                        <li>Runway viewing restaurant terrace</li>
+                        <li>Recently updated facilities</li>
+                    </ul>
+                </div>
+
+                <div class="hotel-card">
+                    <div class="hotel-name">Ibis Budget London Heathrow T5</div>
+                    <span class="badge budget">Budget Option</span>
+                    <div class="price">£60-70 per night</div>
+                    <div class="commute">🚌 Hoppa bus service (20-40 mins, £6.80 one way)</div>
+                    <ul class="features">
+                        <li>Most affordable option</li>
+                        <li>1 mile from Terminal 5</li>
+                        <li>On-site parking £5 per 24 hours</li>
+                        <li>Modern British restaurant on-site</li>
+                        <li>Free high-speed WiFi</li>
+                    </ul>
+                </div>
+
+                <div class="hotel-card">
+                    <div class="hotel-name">Holiday Inn Express Terminal 4</div>
+                    <div class="price">£115 per night</div>
+                    <div class="commute">🚶‍♂️ Walk to T4 + 🚇 Free train connection to T5</div>
+                    <ul class="features">
+                        <li>Complimentary Express Start breakfast</li>
+                        <li>Easy terminal connections via covered walkway</li>
+                        <li>Clean, quiet, modern rooms</li>
+                        <li>24-hour business center</li>
+                        <li>Helpful multilingual staff</li>
+                    </ul>
+                </div>
+
+                <div class="hotel-card">
+                    <div class="hotel-name">DoubleTree by Hilton Heathrow</div>
+                    <div class="price">£77 per night</div>
+                    <div class="commute">🚌 Hoppa bus service to all terminals</div>
+                    <ul class="features">
+                        <li>80% customer satisfaction rating</li>
+                        <li>Full-service hotel amenities</li>
+                        <li>Indoor pool and fitness center</li>
+                        <li>Multiple dining options</li>
+                        <li>Hilton Honors benefits</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="transport-info">
+                <h3 style="color: #059669; margin-top: 0;">🚊 Transportation & Connectivity</h3>
+                <div class="transport-grid">
+                    <div class="transport-item">
+                        <strong>Inter-Terminal Connections</strong><br>
+                        Free Heathrow Express and Underground trains connect all terminals every 15 minutes
+                    </div>
+                    <div class="transport-item">
+                        <strong>Early Morning Service</strong><br>
+                        Buses run between terminals from 3:51 AM for early departures and late arrivals
+                    </div>
+                    <div class="transport-item">
+                        <strong>Hoppa Bus Service</strong><br>
+                        Airport-operated shuttle buses connect most hotels to all terminals (£6.80 one way)
+                    </div>
+                    <div class="transport-item">
+                        <strong>Pod Service (Unique)</strong><br>
+                        Exclusive to Thistle T5 - automated driverless capsules directly to Terminal 5
+                    </div>
+                </div>
+            </div>
+
+            <div class="sources">
+                <h4>📚 Sources & Research References</h4>
+                <ul class="source-list">
+                    <li><strong>Which? Magazine</strong> - Best Airport Hotels 2025 Survey (July 2025)</li>
+                    <li><strong>Head for Points</strong> - Heathrow Airport Hotels Walkable Guide (August 2025)</li>
+                    <li><strong>GTIA Official</strong> - ChannelCon EMEA 2025 Event Information (June 2025)</li>
+                    <li><strong>London Toolkit</strong> - Terminal 5 Hotels Comprehensive Guide (July 2025)</li>
+                    <li><strong>Thistle Hotels</strong> - Official Terminal 5 Information & Pod Service (July 2025)</li>
+                    <li><strong>Premier Inn</strong> - Official Heathrow Hotel Portfolio (August 2025)</li>
+                    <li><strong>Luxury Travel Diary</strong> - Sofitel vs Hilton Comparison Analysis (July 2025)</li>
+                    <li><strong>Official Heathrow Airport</strong> - Hotel Directory & Transport Guide (August 2025)</li>
+                    <li><strong>Travel Industry Reviews</strong> - Rick Steves Community & Traveler Feedback (July 2025)</li>
+                </ul>
+                
+                <div class="last-updated">
+                    <strong>Research compiled:</strong> August 4, 2025 | Information verified from official hotel websites, GTIA event documentation, and current travel industry sources
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
