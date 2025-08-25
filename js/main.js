@@ -16,6 +16,7 @@ class HotelGuide {
         this.setupThemeToggle();
         this.setupActiveNav();
         this.setupBackToTop();
+        this.setupMenuToggle();
     }
 
     setupEventListeners() {
@@ -77,6 +78,21 @@ class HotelGuide {
         window.addEventListener('scroll', toggleVisibility);
         button.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
+
+    setupMenuToggle() {
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.main-nav');
+        const links = document.querySelectorAll('.nav-links a');
+        if (!toggle || !nav) return;
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+
+        links.forEach(link => {
+            link.addEventListener('click', () => nav.classList.remove('open'));
         });
     }
 

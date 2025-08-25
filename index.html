@@ -64,9 +64,12 @@
         </div>
 
         <nav class="main-nav">
-            <a href="#event-info">Event Info</a>
-            <a href="#accommodations">Hotels</a>
-            <a href="#transport">Transport</a>
+            <button class="menu-toggle" aria-label="Toggle navigation">☰</button>
+            <div class="nav-links">
+                <a href="#event-info">Event Info</a>
+                <a href="#accommodations">Hotels</a>
+                <a href="#transport">Transport</a>
+            </div>
             <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
         </nav>
 
@@ -80,7 +83,7 @@
         
         <div class="content">
             <section id="event-info" class="event-info">
-                <h2 style="color: #1e40af; margin-top: 0;">📍 Event Information</h2>
+                <h2 class="section-title">📍 Event Information</h2>
                 <div class="event-details">
                     <div class="detail-item">
                         <strong>📅 Dates:</strong> October 13-14, 2025
@@ -108,7 +111,7 @@
             </section>
 
             <div class="gtia-rates">
-                <h3 style="margin-top: 0;">🏆 GTIA Negotiated Rates Available</h3>
+                <h3>🏆 GTIA Negotiated Rates Available</h3>
                 <div class="rate-callout">
                     <p><strong>GTIA has secured a limited number of rooms at £189.00*</strong></p>
                     <p class="rate-note">GTIA-negotiated Sofitel rate: £189/night (you save £100+ vs. market rate)</p>
