@@ -32,6 +32,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
@@ -96,6 +100,11 @@ body {
     color: var(--secondary-blue);
 }
 
+.main-nav a.active {
+    color: var(--secondary-blue);
+    border-bottom: 2px solid var(--secondary-blue);
+}
+
 .theme-toggle {
     background: none;
     border: none;
@@ -105,6 +114,37 @@ body {
 }
 
 .theme-toggle:focus {
+    outline: 2px solid var(--secondary-blue);
+    outline-offset: 2px;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    border-radius: 50%;
+    background: var(--secondary-blue);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-lg);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back-to-top:focus {
     outline: 2px solid var(--secondary-blue);
     outline-offset: 2px;
 }
@@ -945,6 +985,10 @@ body.dark-theme .main-nav a:hover {
 
 body.dark-theme .theme-toggle {
     color: #f1f5f9;
+}
+
+body.dark-theme .back-to-top {
+    background: var(--accent-purple);
 }
 
 body.dark-theme .hotel-card {
