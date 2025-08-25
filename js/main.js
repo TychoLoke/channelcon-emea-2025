@@ -14,6 +14,8 @@ class HotelGuide {
 
         this.setupEventListeners();
         this.setupThemeToggle();
+        this.setupActiveNav();
+        this.setupBackToTop();
     }
 
     setupEventListeners() {
@@ -36,6 +38,45 @@ class HotelGuide {
             if (!link.getAttribute('rel')) {
                 link.setAttribute('rel', 'noopener noreferrer');
             }
+        });
+    }
+
+    setupActiveNav() {
+        const links = document.querySelectorAll('.main-nav a[href^="#"]');
+        if (!links.length) return;
+
+        const sections = Array.from(links)
+            .map(link => document.querySelector(link.getAttribute('href')))
+            .filter(Boolean);
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const index = sections.indexOf(entry.target);
+                if (entry.isIntersecting && index >= 0) {
+                    links.forEach(l => l.classList.remove('active'));
+                    links[index].classList.add('active');
+                }
+            });
+        }, { threshold: 0.5 });
+
+        sections.forEach(section => observer.observe(section));
+    }
+
+    setupBackToTop() {
+        const button = document.getElementById('backToTop');
+        if (!button) return;
+
+        const toggleVisibility = () => {
+            if (window.scrollY > 300) {
+                button.classList.add('visible');
+            } else {
+                button.classList.remove('visible');
+            }
+        };
+
+        window.addEventListener('scroll', toggleVisibility);
+        button.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
