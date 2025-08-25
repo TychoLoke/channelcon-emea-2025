@@ -62,7 +62,14 @@
         <div class="price-check-banner">
             📊 Prices checked by <span class="highlight">Tycho Löke</span> on <span class="highlight">August 4th, 2025</span> • Real-time availability for ChannelCon EMEA dates
         </div>
-        
+
+        <nav class="main-nav">
+            <a href="#event-info">Event Info</a>
+            <a href="#accommodations">Hotels</a>
+            <a href="#transport">Transport</a>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        </nav>
+
         <div class="header">
             <div class="header-content">
                 <h1>ChannelCon EMEA 2025</h1>
@@ -72,7 +79,7 @@
         </div>
         
         <div class="content">
-            <div class="event-info">
+            <section id="event-info" class="event-info">
                 <h2 style="color: #1e40af; margin-top: 0;">📍 Event Information</h2>
                 <div class="event-details">
                     <div class="detail-item">
@@ -98,7 +105,7 @@
                         📋 Plan Your Trip
                     </a>
                 </div>
-            </div>
+            </section>
 
             <div class="gtia-rates">
                 <h3 style="margin-top: 0;">🏆 GTIA Negotiated Rates Available</h3>
@@ -241,13 +248,14 @@
                 </ul>
             </div>
 
-            <h2 class="section-header">🏨 Accommodation Options</h2>
-            
-            <div id="hotelGrid" class="hotel-grid">
-                <!-- Hotels will be loaded via JavaScript -->
-            </div>
+            <section id="accommodations">
+                <h2 class="section-header">🏨 Accommodation Options</h2>
+                <div id="hotelGrid" class="hotel-grid">
+                    <!-- Hotels will be loaded via JavaScript -->
+                </div>
+            </section>
 
-            <div class="transport-info">
+            <section id="transport" class="transport-info">
                 <h3>🚊 Transportation & Connectivity</h3>
                 <div class="transport-grid">
                     <div class="transport-item">
@@ -279,7 +287,7 @@
                         <p>Exclusive to Thistle T5 - automated driverless capsules directly to Terminal 5</p>
                     </div>
                 </div>
-            </div>
+            </section>
 
             <div class="sources">
                 <h4>📚 Sources & Research References</h4>
