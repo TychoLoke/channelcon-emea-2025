@@ -262,6 +262,258 @@ const hotelData = {
                 ]
             }
         ]
+    },
+    'holiday-inn-bath-road': {
+        name: 'Holiday Inn London – Heathrow Bath Road',
+        address: '276 Bath Road, West Drayton, UB7 0DQ',
+        price: '£110-150 per night',
+        priceClass: '',
+        badges: [],
+        commute: '🚌 Hoppa H8/H9 or free bus 423 to T5; 🚕 5-10 min taxi',
+        features: [
+            'Modern rooms & suites',
+            'On-site restaurant and bar',
+            '24-hour fitness center',
+            'IHG rewards benefits',
+            'Meeting & event spaces'
+        ],
+        transport: [
+            {
+                icon: '🚌',
+                title: 'Hotel Hoppa H8/H9',
+                details: [
+                    { label: 'Duration', value: '10-15 minutes', class: 'time-highlight' },
+                    { label: 'Cost', value: '£6.80', class: 'cost-highlight' },
+                    { label: 'Route', value: 'H8/H9 bus direct to T5' },
+                    { label: 'Frequency', value: 'Every 20 minutes' }
+                ]
+            },
+            {
+                icon: '🚌',
+                title: 'Public Bus 423',
+                details: [
+                    { label: 'Duration', value: '10 minutes', class: 'time-highlight' },
+                    { label: 'Cost', value: 'FREE', class: 'cost-highlight' },
+                    { label: 'Route', value: 'Bus 423 within free travel zone to T5' },
+                    { label: 'Frequency', value: 'Every 10-12 minutes' }
+                ]
+            },
+            {
+                icon: '🚕',
+                title: 'Taxi / Uber',
+                details: [
+                    { label: 'Duration', value: '5-10 minutes', class: 'time-highlight' },
+                    { label: 'Taxi Cost', value: '£12-18', class: 'cost-highlight' },
+                    { label: 'Uber Cost', value: '£10-15', class: 'cost-highlight' },
+                    { label: 'Distance', value: '2.5 miles' }
+                ]
+            }
+        ]
+    },
+    'crowne-plaza-t4': {
+        name: 'Crowne Plaza London Heathrow T4',
+        address: 'Swindon Road, London Heathrow Airport, TW6 3FJ',
+        price: '£120-160 per night',
+        priceClass: '',
+        badges: [],
+        commute: '🚶‍♂️ Covered walkway to T4 + 🚆 free train to T5',
+        features: [
+            'Direct terminal access via covered walkway',
+            'On-site restaurants & bar',
+            'Fitness center',
+            'Conference and meeting facilities',
+            'IHG Club Lounge access'
+        ],
+        transport: [
+            {
+                icon: '🚶‍♂️',
+                title: 'Walk + Free Train',
+                details: [
+                    { label: 'Total Duration', value: '15 minutes', class: 'time-highlight' },
+                    { label: 'Cost', value: 'FREE', class: 'cost-highlight' },
+                    { label: 'Route', value: 'Walk to T4 then Heathrow Express/TfL Rail to T5' },
+                    { label: 'Frequency', value: 'Every 15 minutes' }
+                ]
+            },
+            {
+                icon: '🚌',
+                title: 'Buses 482/490',
+                details: [
+                    { label: 'Duration', value: '20 minutes', class: 'time-highlight' },
+                    { label: 'Cost', value: 'FREE', class: 'cost-highlight' },
+                    { label: 'Route', value: 'Buses 482/490 from T4 to T5' },
+                    { label: 'Frequency', value: 'Every 10-15 minutes' }
+                ]
+            },
+            {
+                icon: '🚕',
+                title: 'Taxi / Uber',
+                details: [
+                    { label: 'Duration', value: '8-12 minutes', class: 'time-highlight' },
+                    { label: 'Taxi Cost', value: '£15-20', class: 'cost-highlight' },
+                    { label: 'Uber Cost', value: '£12-18', class: 'cost-highlight' },
+                    { label: 'Distance', value: '3.1 miles' }
+                ]
+            }
+        ]
+    },
+    'staybridge-bath-road': {
+        name: 'Staybridge Suites London – Heathrow Bath Road',
+        address: '276A Bath Road, West Drayton, UB7 0DQ',
+        price: '£130-170 per night',
+        priceClass: '',
+        badges: [],
+        commute: '🚌 Hoppa H8/H9 or free bus 423 to T5; 🚕 5-10 min taxi',
+        features: [
+            'Suite-style rooms with kitchenettes',
+            'Complimentary breakfast',
+            'Evening social receptions',
+            '24-hour fitness centre',
+            'Guest laundry facilities'
+        ],
+        transport: [
+            {
+                icon: '🚌',
+                title: 'Hotel Hoppa H8/H9',
+                details: [
+                    { label: 'Duration', value: '10-15 minutes', class: 'time-highlight' },
+                    { label: 'Cost', value: '£6.80', class: 'cost-highlight' },
+                    { label: 'Route', value: 'H8/H9 bus direct to T5' },
+                    { label: 'Frequency', value: 'Every 20 minutes' }
+                ]
+            },
+            {
+                icon: '🚌',
+                title: 'Public Bus 423',
+                details: [
+                    { label: 'Duration', value: '10 minutes', class: 'time-highlight' },
+                    { label: 'Cost', value: 'FREE', class: 'cost-highlight' },
+                    { label: 'Route', value: 'Bus 423 within free travel zone to T5' },
+                    { label: 'Frequency', value: 'Every 10-12 minutes' }
+                ]
+            },
+            {
+                icon: '🚕',
+                title: 'Taxi / Uber',
+                details: [
+                    { label: 'Duration', value: '5-10 minutes', class: 'time-highlight' },
+                    { label: 'Taxi Cost', value: '£12-18', class: 'cost-highlight' },
+                    { label: 'Uber Cost', value: '£10-15', class: 'cost-highlight' },
+                    { label: 'Distance', value: '2.5 miles' }
+                ]
+            }
+        ]
+    },
+    'sleeplicity': {
+        name: 'Sleeplicity London Heathrow',
+        address: '10 Hanworth Road, Feltham, TW13 5AB',
+        price: '£70-100 per night',
+        priceClass: '',
+        badges: ['budget'],
+        commute: '🚌 Bus 350/423 to Heathrow Central + free train to T5; 🚕 10 min taxi',
+        features: [
+            'Budget-friendly modern stay',
+            'Free Wi-Fi',
+            '24-hour reception',
+            'On-site parking',
+            'Continental breakfast available'
+        ],
+        transport: [
+            {
+                icon: '🚌',
+                title: 'Bus 350/423 + Free Train',
+                details: [
+                    { label: 'Total Duration', value: '25-30 minutes', class: 'time-highlight' },
+                    { label: 'Cost', value: '£2.80', class: 'cost-highlight' },
+                    { label: 'Route', value: 'Bus 350/423 to Heathrow Central + free train to T5' },
+                    { label: 'Frequency', value: 'Every 15-20 minutes' }
+                ]
+            },
+            {
+                icon: '🚕',
+                title: 'Taxi / Uber',
+                details: [
+                    { label: 'Duration', value: '10 minutes', class: 'time-highlight' },
+                    { label: 'Taxi Cost', value: '£15-20', class: 'cost-highlight' },
+                    { label: 'Uber Cost', value: '£12-18', class: 'cost-highlight' },
+                    { label: 'Distance', value: '4.5 miles' }
+                ]
+            }
+        ]
+    },
+    'tower-arms': {
+        name: 'The Tower Arms',
+        address: 'Thorney Mill Road, Iver, SL0 9AE',
+        price: '£80-120 per night',
+        priceClass: '',
+        badges: [],
+        commute: '🚕 10-15 min taxi or 🚆 train via Iver station to T5',
+        features: [
+            'Traditional British inn with pub',
+            'Complimentary breakfast',
+            'Free parking',
+            'Outdoor garden area',
+            'Quiet village setting'
+        ],
+        transport: [
+            {
+                icon: '🚕',
+                title: 'Taxi',
+                details: [
+                    { label: 'Duration', value: '10-15 minutes', class: 'time-highlight' },
+                    { label: 'Cost', value: '£20-25', class: 'cost-highlight' },
+                    { label: 'Route', value: 'Direct taxi to T5' },
+                    { label: 'Availability', value: '24/7' }
+                ]
+            },
+            {
+                icon: '🚶‍♂️',
+                title: 'Walk + Train',
+                details: [
+                    { label: 'Total Duration', value: '30-40 minutes', class: 'time-highlight' },
+                    { label: 'Cost', value: '£6-8', class: 'cost-highlight' },
+                    { label: 'Route', value: 'Walk to Iver station + Elizabeth line via Hayes & Harlington' },
+                    { label: 'Frequency', value: 'Every 30 minutes' }
+                ]
+            }
+        ]
+    },
+    'king-paget': {
+        name: 'King Paget Hotel',
+        address: '171 Station Road, West Drayton, UB7 7JA',
+        price: '£60-90 per night',
+        priceClass: '',
+        badges: ['budget'],
+        commute: '🚌 Bus 350 or U3 to Heathrow Central + free train to T5; 🚕 10 min taxi',
+        features: [
+            'Victorian-era charm',
+            'Complimentary breakfast',
+            'Free parking',
+            'Family rooms available',
+            'On-site bar'
+        ],
+        transport: [
+            {
+                icon: '🚌',
+                title: 'Bus 350/U3 + Free Train',
+                details: [
+                    { label: 'Total Duration', value: '20-25 minutes', class: 'time-highlight' },
+                    { label: 'Cost', value: '£2.80', class: 'cost-highlight' },
+                    { label: 'Route', value: 'Bus 350 or U3 to Heathrow Central + free train to T5' },
+                    { label: 'Frequency', value: 'Every 10-15 minutes' }
+                ]
+            },
+            {
+                icon: '🚕',
+                title: 'Taxi / Uber',
+                details: [
+                    { label: 'Duration', value: '10 minutes', class: 'time-highlight' },
+                    { label: 'Taxi Cost', value: '£15-20', class: 'cost-highlight' },
+                    { label: 'Uber Cost', value: '£12-18', class: 'cost-highlight' },
+                    { label: 'Distance', value: '3 miles' }
+                ]
+            }
+        ]
     }
 };
 

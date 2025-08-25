@@ -91,6 +91,12 @@ channelcon-hotel-guide/
 - **Thistle London Heathrow T5** - Pod service convenience (£82-136)
 - **Holiday Inn Express T4** - Includes breakfast (£82-115)
 - **Premier Inn locations** - Various budget-friendly options
+- **Holiday Inn London – Heathrow Bath Road** - Mid-range IHG option (£110-150)
+- **Crowne Plaza London Heathrow T4** - Upscale IHG with walkway to T4 (£120-160)
+- **Staybridge Suites London – Heathrow Bath Road** - Apartment-style suites (£130-170)
+- **Sleeplicity London Heathrow** - Budget-friendly modern stay (£70-100)
+- **The Tower Arms** - Traditional inn in Iver (£80-120)
+- **King Paget Hotel** - Victorian charm in West Drayton (£60-90)
 
 ### Unavailable (Fully Booked)
 - Ibis Budget London Heathrow T5
