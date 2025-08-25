@@ -11,10 +11,11 @@ class HotelGuide {
         } else {
             this.render();
         }
-        
+
         this.setupEventListeners();
+        this.setupThemeToggle();
     }
-    
+
     setupEventListeners() {
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -35,6 +36,28 @@ class HotelGuide {
             if (!link.getAttribute('rel')) {
                 link.setAttribute('rel', 'noopener noreferrer');
             }
+        });
+    }
+
+    setupThemeToggle() {
+        const toggle = document.getElementById('themeToggle');
+        if (!toggle) return;
+
+        const applyTheme = (mode) => {
+            document.body.classList.toggle('dark-theme', mode === 'dark');
+            toggle.textContent = mode === 'dark' ? '☀️' : '🌙';
+        };
+
+        let current = localStorage.getItem('theme');
+        if (!current) {
+            current = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        applyTheme(current);
+
+        toggle.addEventListener('click', () => {
+            const newMode = document.body.classList.contains('dark-theme') ? 'light' : 'dark';
+            applyTheme(newMode);
+            localStorage.setItem('theme', newMode);
         });
     }
     
