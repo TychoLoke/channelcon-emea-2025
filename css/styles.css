@@ -40,6 +40,7 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #1f2937;
     font-size: 16px;
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -68,6 +69,56 @@ body {
     padding: 2px 8px;
     border-radius: 4px;
     margin: 0 4px;
+}
+
+/* Navigation Styles */
+.main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(8px);
+    box-shadow: var(--shadow-sm);
+}
+
+.main-nav a {
+    color: var(--primary-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.main-nav a:hover {
+    color: var(--secondary-blue);
+}
+
+.theme-toggle {
+    background: var(--secondary-blue);
+    border: none;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #fff;
+    transition: var(--transition-fast);
+}
+
+.theme-toggle:hover {
+    background: var(--primary-blue);
+}
+
+.theme-toggle:focus {
+    outline: 2px solid var(--primary-blue);
+    outline-offset: 2px;
 }
 
 .header {
@@ -123,6 +174,10 @@ body {
     padding: 3rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.content section {
+    scroll-margin-top: 5rem;
 }
 
 .section-header {
@@ -880,6 +935,51 @@ body {
 .site-footer a {
     color: inherit;
     text-decoration: none;
+}
+
+/* Dark Theme */
+body.dark-theme {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #f1f5f9;
+}
+
+body.dark-theme .container {
+    background: #1e293b;
+}
+
+body.dark-theme .main-nav {
+    background: rgba(30,41,59,0.8);
+}
+
+body.dark-theme .main-nav a {
+    color: #bfdbfe;
+}
+
+body.dark-theme .main-nav a:hover {
+    color: #60a5fa;
+}
+
+body.dark-theme .theme-toggle {
+    background: #334155;
+    color: #f1f5f9;
+}
+
+body.dark-theme .theme-toggle:hover {
+    background: #475569;
+}
+
+body.dark-theme .hotel-card {
+    background: #334155;
+    color: #f1f5f9;
+}
+
+body.dark-theme .modal-content {
+    background: #1e293b;
+    color: #f1f5f9;
+}
+
+body.dark-theme .site-footer {
+    color: #cbd5e1;
 }
 
 /* Animations */

@@ -31,7 +31,7 @@ const hotelData = {
     'premier-t4': {
         name: 'Premier Inn Heathrow Terminal 4',
         address: 'Sheffield Road, London Heathrow Airport, TW6 3AF',
-        price: '£70 per night',
+        price: '£79 per night',
         priceClass: '',
         badges: ['best-value'],
         commute: '🚶‍♂️ 6-min walk + 🚇 Free inter-terminal train (15 mins total to T5)',
@@ -78,7 +78,7 @@ const hotelData = {
     'thistle': {
         name: 'Thistle London Heathrow T5',
         address: 'Bath Road, Longford, West Drayton UB7 0EQ',
-        price: '£82-136 per night',
+        price: '£90-145 per night',
         priceClass: '',
         badges: ['most-convenient'],
         commute: '🚁 5-minute automated Pod service directly to Terminal 5',
@@ -125,7 +125,7 @@ const hotelData = {
     'holiday-inn-express': {
         name: 'Holiday Inn Express Terminal 4',
         address: 'Terminal 4, London Heathrow Airport, TW6 3AF',
-        price: '£82-115 per night',
+        price: '£89-120 per night',
         priceClass: '',
         badges: [],
         commute: '🚶‍♂️ Walk to T4 + 🚇 Free train connection to T5',
@@ -172,7 +172,7 @@ const hotelData = {
     'premier-bath-road': {
         name: 'Premier Inn Bath Road (T2/T3)',
         address: 'Bath Road, Hounslow, London TW5 9QE',
-        price: '£70 per night',
+        price: '£75 per night',
         priceClass: '',
         badges: [],
         commute: '🚌 Bus links to T2/T3, then free train to T5',
@@ -219,7 +219,7 @@ const hotelData = {
     'premier-t5': {
         name: 'Premier Inn Terminal 5',
         address: 'Bath Road, Colnbrook, Slough SL3 0NF',
-        price: '£85 per night',
+        price: '£90 per night',
         priceClass: '',
         badges: [],
         commute: '🚌 Hoppa bus service to T5 (10-15 mins)',
